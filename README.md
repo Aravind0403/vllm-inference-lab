@@ -1,6 +1,8 @@
 # vLLM v1 Systems Lab & Interactive Courseware
 
-An interactive systems engineering laboratory and courseware platform for **vLLM v1**, **PagedAttention**, and **modern LLM inference architectures**.
+An interactive, practice-first systems engineering laboratory and courseware platform for **vLLM v1**, **PagedAttention**, and **modern LLM inference architectures**.
+
+Repository: [https://github.com/Aravind0403/vllm-inference-lab](https://github.com/Aravind0403/vllm-inference-lab)
 
 Inspired by:
 - `infra.bea.ai` (Dual-phase Roofline models, interactive calculators, latency breakdowns, and `nano-vllm`).
@@ -11,20 +13,22 @@ Inspired by:
 
 ## Quick Start (Run Locally)
 
-### Option 1: Open Directly in Browser
+### Option 1: Serve Locally (Recommended)
 ```bash
-open file:///Users/aravindsundaresan/Documents/ChatGPT/vllm-inference-systems-lab/index.html
-```
-
-### Option 2: Serve Locally (Recommended)
-```bash
-python3 -m http.server 8085 --directory /Users/aravindsundaresan/Documents/ChatGPT/vllm-inference-systems-lab/
+cd /Users/aravindsundaresan/Development/Inference
+python3 -m http.server 8085
 # Open: http://localhost:8085
 ```
 
-### Option 3: Run the nano-vllm Micro-Engine in Terminal
+### Option 2: Run the nano-vllm Micro-Engine in Terminal
 ```bash
-python3 /Users/aravindsundaresan/Documents/ChatGPT/vllm-inference-systems-lab/nano_vllm.py
+python3 /Users/aravindsundaresan/Development/Inference/nano_vllm.py
+```
+
+### Option 3: Deploy to Netlify
+```bash
+cd /Users/aravindsundaresan/Development/Inference
+npx netlify deploy --prod
 ```
 
 ---
