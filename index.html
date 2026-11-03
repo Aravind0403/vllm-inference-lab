@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0f19" />
+    <meta name="description" content="A practice-first, graduate-level learning platform and systems lab for the vLLM v1 Core Engine and Continuous Batching Scheduler." />
+    <meta property="og:title" content="vLLM Systems Lab &middot; Architecture &amp; Courseware" />
+    <meta property="og:description" content="Trace vLLM v1 line-by-line across every critical subsystem: process boundaries, continuous batching scheduler loops, memory pools, and distributed connectors." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+    <title>vLLM Systems Lab &middot; Architecture &amp; Courseware</title>
+    
+    <!-- Google Fonts: DM Sans, Manrope, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Self-Contained Master Stylesheet (Zero-Dependency & Offline Ready) -->
+    <link rel="stylesheet" href="styles.css?v=4" />
+  </head>
+  <body>
+
+    <!-- Top Console Navigation Header -->
+    <header class="lab-header">
+      <div class="lab-brand" id="brand-link">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-text">
+          <strong>vLLM Systems Lab</strong>
+          <small>V1 Architecture &middot; Courseware</small>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs: Dashboard -> Curriculum -> Milestones -> References -> Interactive Sandboxes -->
+      <nav class="nav-tabs" aria-label="Main Navigation">
+        <button class="nav-tab-btn active" data-view="dashboard">Dashboard</button>
+        <button class="nav-tab-btn" data-view="curriculum">Course Curriculum</button>
+        <button class="nav-tab-btn" data-view="milestones">Milestone Labs</button>
+        <button class="nav-tab-btn" data-view="references">Reference Shelf</button>
+        <button class="nav-tab-btn" data-view="sandboxes">Interactive Sandboxes</button>
+      </nav>
+
+      <div class="header-status">
+        <span class="status-indicator"></span>
+        <span id="header-saved-text">Local State Active</span>
+      </div>
+    </header>
+
+    <!-- Main Content Canvas -->
+    <main class="lab-container">
+      <div id="view-container"></div>
+    </main>
+
+    <!-- Floating Toast Notification -->
+    <div id="toast" class="toast" role="status"></div>
+
+    <!-- Application Engine -->
+    <script src="app.js?v=4"></script>
+  </body>
+</html>

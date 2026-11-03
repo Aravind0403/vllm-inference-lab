@@ -1,0 +1,32 @@
+# Netlify Configuration for vLLM Systems Lab
+# High-performance static deployment & CDN edge caching
+
+[build]
+  publish = "."
+
+# Security & Optimization Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static style and script bundles with short revalidation for easy updates
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# Single-Page Application (SPA) routing fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

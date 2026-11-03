@@ -1,0 +1,21 @@
+{
+  "name": "vllm-inference-systems-lab",
+  "version": "1.0.0",
+  "description": "A practice-first, graduate-level learning platform and systems lab for the vLLM v1 Core Engine and Continuous Batching Scheduler.",
+  "scripts": {
+    "start": "python3 -m http.server 8085",
+    "build": "python3 build_tailored_lab.py",
+    "deploy": "npx netlify deploy",
+    "deploy:prod": "npx netlify deploy --prod"
+  },
+  "keywords": [
+    "vllm",
+    "llm-inference",
+    "paged-attention",
+    "continuous-batching",
+    "courseware",
+    "systems-lab"
+  ],
+  "author": "",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,16 @@
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Netlify local dev & build artifacts
+.netlify/
