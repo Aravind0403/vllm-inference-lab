@@ -1,5 +1,5 @@
 {
-  "name": "vllm-inference-systems-lab",
+  "name": "vllm-inference-lab",
   "version": "1.0.0",
   "description": "A practice-first, graduate-level learning platform and systems lab for the vLLM v1 Core Engine and Continuous Batching Scheduler.",
   "scripts": {

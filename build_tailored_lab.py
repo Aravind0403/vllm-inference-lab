@@ -1349,7 +1349,10 @@ document.addEventListener('DOMContentLoaded', () => {{
 }});
 """
 
-with open('/Users/aravindsundaresan/Documents/ChatGPT/vllm-inference-systems-lab/app.js', 'w') as f:
+import os
+
+out_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app.js')
+with open(out_path, 'w') as f:
     f.write(app_js)
 
-print("Generated clean app.js for pure styles.css architecture!")
+print(f"Generated clean app.js at {out_path} for pure styles.css architecture!")
